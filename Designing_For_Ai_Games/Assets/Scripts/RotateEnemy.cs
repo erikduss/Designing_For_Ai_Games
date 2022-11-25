@@ -28,7 +28,18 @@ public class RotateEnemy : MonoBehaviour
     void FixedUpdate()
     {
         //RotateToPlayer();
-        if(rotate) Rotate();
+        //if(rotate) Rotate();
+
+        Debug.Log(Angle());
+    }
+
+    private float Angle()
+    {
+        Vector3 localTarget = transform.InverseTransformPoint(playerTransform.position);
+
+        float angle = Mathf.Atan2(localTarget.x, localTarget.z) * Mathf.Rad2Deg;
+
+        return angle;
     }
 
     private void Rotate()
