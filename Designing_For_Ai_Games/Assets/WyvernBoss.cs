@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class WyvernBoss : MonoBehaviour, Provokable
 {
     public float maxHealth = 1000;
     public float currentHealth = 1000;
+
+    public TextMeshPro statusText;
 
     private GameManager gameManager;
     public Transform currentTarget;

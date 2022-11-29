@@ -21,7 +21,8 @@ public class ArcherCompanion : MonoBehaviour
     [SerializeField] private LayerMask targetLayers;
     private float provokeZone = 25;
 
-    [SerializeField] private TextMeshProUGUI companionModeText; 
+    [SerializeField] private TextMeshProUGUI companionModeText;
+    public TextMeshPro statusText;
 
     // Start is called before the first frame update
     void Start()
